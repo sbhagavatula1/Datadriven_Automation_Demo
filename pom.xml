@@ -1,0 +1,286 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>DataDriven_AutomationFramework</groupId>
+	<artifactId>OrangeHRM_AutomationDemo_SB</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<maven.compiler.version>21</maven.compiler.version>
+		<maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+
+		<JUnit.Platform.Suite_Version>1.11.3</JUnit.Platform.Suite_Version>
+		<selenium.version>4.22.0</selenium.version>
+		<cucumber.version>7.20.1</cucumber.version>
+
+		<junit.version>4.13.2</junit.version>
+
+		<junit-platform-suite.version>1.10.3</junit-platform-suite.version>
+		<junit.jupiter.version>5.11.3</junit.jupiter.version>
+
+		<testng.version>7.10.2</testng.version>
+
+		<maven.surefire.plugin.version.for.allProviders>3.5.2</maven.surefire.plugin.version.for.allProviders>
+		<maven.surefire.plugin.version>3.0.0-M7</maven.surefire.plugin.version>
+
+		<poi.version>4.1.1</poi.version>
+		<opencsv.version>5.9</opencsv.version>
+		<googlecode.json.simple.version>1.1.1</googlecode.json.simple.version>
+
+		<mssqlserver.jdbc.version>12.8.1.jre11</mssqlserver.jdbc.version>
+		<mysql.jdbc.version>9.0.0</mysql.jdbc.version>
+		<oracle.database.jdbc.version>23.5.0.24.07</oracle.database.jdbc.version>
+
+		<extentreports.version>5.1.1</extentreports.version>
+		<extentreports-cucumber7-adapter.version>1.14.0</extentreports-cucumber7-adapter.version>
+		<log4j.version>1.2.17</log4j.version>
+		<commons-io.version>2.15.0</commons-io.version>
+
+	</properties>
+
+	<dependencies>
+	
+		<!-- Selenium Dependency-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- JUnit4 Dependency -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		<!-- TestNG Dependency -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+		<!-- JUnit5 Dependencies -->
+		<!--
+		https://video.search.yahoo.com/search/video?fr=mcafee&p=maven.surefire.plugin.versio&type=E210US105G0#id=3&vid=5d4f335b177d1d63ba935d6d608e536c&action=click
+		https://medium.com/@koushicksudharsanam/junit-5-test-runner-configuration-with-cucumber-95e64863e66a
+		-->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<version>${JUnit.Platform.Suite_Version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		
+		
+		<!--To integrate Cucumber with JUnit4 -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<!--To integrate Cucumber with TestNG -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<!--To integrate Cucumber with JUnit5 -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit-platform-engine</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- Dependency Injection-->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- To read from Excel data  -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>${opencsv.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- SQLServer JDBC connector -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>${mssqlserver.jdbc.version}</version>
+		</dependency>
+		
+		
+		
+		<!-- MySQL JDBC connector -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>${mysql.jdbc.version}</version>
+		</dependency>
+		
+		
+		
+		<!--
+		https://www.oracle.com/database/technologies/getting-started-using-jdbc-onpremise.html#pre-requisites-tab
+			Oracle JDBC Driver compatible with JDK11, JDK17, JDK19, and JDK21
+		-->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
+			<version>${oracle.database.jdbc.version}</version>
+		</dependency>
+		
+		
+		
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<!-- To process data in json format using googlecode -->
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>${googlecode.json.simple.version}</version>
+		</dependency>
+		
+		
+		
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<!-- To adapt and convey cucumber results to Extent reports -->
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports.version}</version>
+		</dependency>
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<!--    Note: "grahopper"" is seen in mvn.repository with   -->
+		<!--          search string "tech.grasshopper"              -->
+		<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>${extentreports-cucumber7-adapter.version}</version>
+		</dependency>
+		<!-- To convert from File to Byte format -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		
+		
+		
+		<!--log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- For compiling -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<source>${maven.compiler.version}</source>
+						<target>${maven.compiler.version}</target>
+						<release>${maven.compiler.version}</release>
+					</configuration>
+				</plugin>
+
+				<!--
+					Applicable for all providers: TestNG, JUnit (3.8, 4.x or 5.x), POJO
+					Ref: https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>${maven.surefire.plugin.version.for.allProviders}</version>
+					</plugin>
+				-->
+				<!--
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>${maven.surefire.plugin.version}</version>
+						<configuration>
+							<includes>
+								<include>**/AppRunner.java</include>
+							</includes>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>${maven.surefire.plugin.version}</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+								</goals>
+								<configuration>
+									<includes>
+										<include>**/AppRunner.java</include>
+									</includes>
+									<parallel>methods</parallel>
+									<useUnlimitedThreads>true</useUnlimitedThreads>
+									<perCoreThreadCount>true</perCoreThreadCount>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				-->
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

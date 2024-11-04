@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<item>
+	<mobile>
+		<id>101</id>
+		<brand>Samsung</brand>
+		<model color="blue">Samsung GalaxyF62</model>
+		<price>320$</price>
+	</mobile>
+	<mobile>
+		<id>102</id>
+		<brand>Motorola</brand>
+		<model color="blueGrey">Motorola G60</model>
+		<price>800$</price>
+	</mobile>
+	<mobile>
+		<id>103</id>
+		<brand>Apple</brand>
+		<model color="purple">Apple iPhone122</model>
+		<price>320$</price>
+	</mobile>
+	<mobile>
+		<id>104</id>
+		<brand>Oneplus</brand>
+		<model color="carbon black">Oneplus Nord CE 5G</model>
+		<price>320$</price>
+	</mobile>
+</item>

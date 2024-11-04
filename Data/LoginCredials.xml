@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LoginCredentials>
+	<UserCredential>
+		<id>001</id>
+		<userid>Admin1</userid>
+		<password>admin1</password>
+		<alertmessage>Dashboard</alertmessage>
+	</UserCredential>
+	<UserCredential>
+		<id>002</id>
+		<userid>Admin2</userid>
+		<password>admin12</password>
+		<alertmessage>Dashboard</alertmessage>
+	</UserCredential>
+	<UserCredential>
+		<id>003</id>
+		<userid>Admin3</userid>
+		<password>admin123</password>
+		<alertmessage>Dashboard</alertmessage>
+	</UserCredential>
+</LoginCredentials>

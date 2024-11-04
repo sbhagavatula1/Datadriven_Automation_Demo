@@ -1,0 +1,7 @@
+<suite name="Suite One" configfailurepolicy="continue">
+  <test name="Test One">
+  <classes>
+   <class name="TestNGOnePack.ClassTwo" />      
+  </classes>
+ </test>
+</suite>
